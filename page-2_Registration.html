@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!--  <link rel="stylesheet" href="scss/style.css"> -->
+    <link rel="stylesheet" href="scss/page2.css">
+</head>
+
+<body>
+
+    <body class="wrapper">
+        <div class="loginPage">
+            <header>
+                <div class="firstHeader">
+
+                    <div class="container upperHeader">
+                        <p>Знакомства по всему миру</p>
+                        <div class="input-field">
+                            <select>
+                                <option value="1">Америка</option>
+                                <option value="2">Россия</option>
+                                <option value="3">Беларусь</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+            <div class="mainBack">
+
+                <div class="infoHeader center">
+
+                    <div class="address">
+                        <a href="#"><img src="images/page1/love-birds.png">Znakomstva.com </a>
+                    </div>
+
+                    <div class="register">
+                        <p>Уже есть аккаунт?</p>
+                        <a class="register-btn" href="page1-LogIn.html">Войти</a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="mainContent">
+
+                    <h2 class="first-text">Создай новый аккаунт</h2>
+                    <p class="below-text">Присоединяйся к сообществу из 518 млн человек!</p>
+                </div>
+
+                <form class="login_form center-form">
+
+                    <div class="enter-name">
+                        <input id="userName" type="text" placeholder="Ваше имя" name="fullName">
+                        <div class="errors_m">
+                            <p class="error-message errors">*Необходимо заполнить поле.</p>
+                        </div>
+                    </div>
+
+                    <div class="DOB">
+
+                        <p>Дата рождения</p>
+
+                        <input class="dateDOB" type="number" placeholder="День" name="dateDay">
+                        <select id="monthDOB">
+                            <option style="color:#8B5D9A;" value="" disabled selected hidden>Месяц</option>
+                            <option value="01">Январь</option>
+                            <option value="02">Февраль</option>
+                            <option value="03">Март</option>
+                            <option value="04">Апрель</option>
+                            <option value="05">Май</option>
+                            <option value="06">Июнь</option>
+                            <option value="07">Июль</option>
+                            <option value="08">Август</option>
+                            <option value="09">Сентябрь</option>
+                            <option value="10">Октябрь</option>
+                            <option value="11">Ноябрь</option>
+                            <option value="12">Декабрь</option>
+                        </select>
+
+                        <input class="yearDOB" type="text" placeholder="Год" name="dateYear">
+                    </div>
+
+                    <!-- <div class="gender">
+                        <input type="image" onclick="false" src="images/page3/man.png" name="man" id="manGender">
+                        <input type="image" onclick="false" src="images/page3/woman.png" name="man" id="womanGender">
+                    </div> -->
+
+
+                    <div class="enter-email">
+                        <input id="userEmail" type="email" placeholder="Введите электронную почту" name="email">
+                        <div class="errors_m">
+                            <p class="error-message2 errors">*Проверьте корректность вашего Email.</p>
+                        </div>
+                    </div>
+
+                    <div class="enter-password">
+                        <input id="userPw" type="password" placeholder="Введите пароль" name="password">
+                        <div class="errors_m">
+                            <p class="error-message3 errors">*Пароль должен содержать не менее 6 символов.</p>
+                        </div>
+                    </div>
+                    <button class="enter-btn" >Создать аккаунт</button>
+                </form>
+
+                <footer class="center">
+
+                    <ul class="footer-info">
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Поддержка</a></li>
+                        <li><a href="#">Советы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Правила оплаты</a></li>
+                        <li><a href="#">Политика обработки персональных данных</a></li>
+                        <li><a href="#">RU</a></li>
+                        <li>
+                            <p>&#169; Company 2021</p>
+                        </li>
+                    </ul>
+
+                </footer>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <script src="script/validation_register_p2.js"></script>
+        <script src="script/signup.js"></script>
+    </body>
+
+</html>

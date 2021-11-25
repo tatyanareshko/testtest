@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body class="wrapper">
+    <div class="loginPage">
+        <header>
+            <div class="firstHeader">
+
+                <div class="container upperHeader">
+                    <p>Знакомства по всему миру</p>
+                    <div class="input-field">
+                        <select>
+                            <option value="1">Америка</option>
+                            <option value="2">Россия</option>
+                            <option value="3">Беларусь</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="mainBack">
+
+            <div class="infoHeader center">
+
+                <div class="address">
+                    <a href="#"><img src="images/page1/love-birds.png">Znakomstva.com </a>
+                </div>
+
+                <div class="register">
+                    <p>Впервые здесь?</p>
+                    <a class="register-btn" href="page-2_Registration.html">Регистрация</a>
+                </div>
+            </div>
+
+
+
+
+            <div class="mainContent">
+
+                <h1 class="first-text">Знакомства без преград</h1>
+                <p class="below-text">Для современного мира сплочённость команды профессионалов однозначно фиксирует
+                    необходимость системы
+                    обучения кадров, соответствующей насущным потребностям.</p>
+            </div>
+
+            <form class="login_form">
+                <div class="enter-email">
+                    <input id="userEmail" type="email" placeholder="Введите электронную почту" name="email">
+                </div>
+
+                <div class="enter-password">
+                    <input id="userPw" type="password" placeholder="Введите пароль" name="password">
+                </div>
+                <button type="submit" class="enter-btn">Войти</button>
+            </form>
+
+            <div class="dontRememberPassword">
+                <a class="btn-forgot-password" href="#">Я не помню пароль</a>
+            </div>
+
+            <footer class="center">
+
+                <ul class="footer-info">
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Поддержка</a></li>
+                    <li><a href="#">Советы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Правила оплаты</a></li>
+                    <li><a href="#">Политика обработки персональных данных</a></li>
+                    <li><a href="#">RU</a></li>
+                    <li>
+                        <p>&#169; Company 2021</p>
+                    </li>
+                </ul>
+
+            </footer>
+        </div>
+    </div>
+    <section class="container changePasswordPage modal_hide">
+        <div class="row align-items-center">
+            <div class="col commonCol">
+                <div id="modal-forgot-password">
+
+                    <div class="contentModal">
+                        <h2>Я не помню пароль</h2>
+                        <p>Введи свой email и мы вышлем тебе инструкции по изменению пароля</p>
+                    </div>
+
+                    <form id="modal_change_pas">
+                        <div class="email-new-pswrd">
+                            <input type="email" placeholder="Введите электронную почту" name="email">
+                        </div>
+                        <div class="ask_new_pswrd">
+                            <a class="send-btn" href="page1-LogIn.html">Запросить новый пароль</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script/script.js"></script>
+    <script src="script/login.js"></script>
+</body>
+
+</html>

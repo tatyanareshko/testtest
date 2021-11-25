@@ -1,0 +1,34 @@
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  font-size: 0;
+  display: none;
+}
+
+.slider .slick-prev {
+  left: 0;
+  /*  background: url('../images/page5/arrowLeft.jpg') 0 0 / 100% no-repeat; */
+  display: none;
+}
+
+.slider .slick-next {
+  right: 0;
+  /* background: url('../images/page5/arrowRight.jpg') 0 0 / 100% no-repeat; */
+  display: none;
+}
+/*# sourceMappingURL=sclick_style.css.map */

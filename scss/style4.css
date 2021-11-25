@@ -1,0 +1,864 @@
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.center {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+.center-form {
+  max-width: 380px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrap-preloader {
+  position: absolute;
+  /* display: none; */
+  width: 100%;
+  background-color: rgba(212, 209, 209, 0.8);
+  text-align: center;
+  height: 100vh;
+  padding-top: 24%;
+}
+
+.wrap-preloader .spinner-border {
+  width: 100px;
+  height: 100px;
+}
+
+.preloader-show {
+  display: none;
+}
+
+.loaded_hiding {
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+#burger {
+  display: none;
+  width: 30px;
+  height: 30px;
+}
+
+#close {
+  display: none;
+  position: absolute;
+  right: 50px;
+  top: -30px;
+  font-size: 36px;
+  color: #ffffff;
+}
+
+#burger i {
+  display: block;
+  background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
+  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+  width: 24px;
+  height: 3px;
+  margin: 3px;
+}
+
+.firstHeader {
+  background: #1b0522;
+}
+
+.firstHeader .upperHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+
+.firstHeader .upperHeader p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 13px;
+  margin-right: 20px;
+  margin-bottom: 13px;
+}
+
+.firstHeader .upperHeader .input-field {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.firstHeader .upperHeader .input-field select {
+  border: none;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  background-color: #1b0522;
+  color: #ffffff;
+  margin-top: 15px;
+  margin-left: 56px;
+}
+
+.firstHeader .upperHeader .input-field select option {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.mainBack {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2a1133), to(#381a42));
+  background: linear-gradient(180deg, #2a1133 0%, #381a42 100%);
+  text-align: center;
+  position: relative;
+}
+
+.mainBack .infoHeader {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 3fr;
+      grid-template-columns: 1fr 2fr 3fr;
+  padding-bottom: 30px;
+}
+
+.mainBack .infoHeader .address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainBack .infoHeader .address a {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 150%;
+  color: #ffffff;
+  margin-top: 26px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainBack .infoHeader .address a img {
+  margin-right: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.mainBack .infoHeader .address a span {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.mainBack .infoHeader .list-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 48px;
+  margin-right: 20px;
+  margin-left: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mainBack .infoHeader .list-menu li {
+  list-style-type: none;
+  margin-right: 10px;
+}
+
+.mainBack .infoHeader .list-menu li a {
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+.mainBack .infoHeader .list-menu li:hover a {
+  color: #fe6703;
+}
+
+.mainBack .infoHeader .list-menu li:first-child {
+  margin-bottom: -45px;
+  border-bottom: 3px solid #ff6a00;
+}
+
+.mainBack .infoHeader .list-menu li:first-child a {
+  color: #fe6703;
+}
+
+.mainBack .infoHeader .add_info {
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: end;
+}
+
+.mainBack .infoHeader .add_info .country_select select {
+  margin-right: 50px;
+  border: none;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  background-color: #2d1436;
+  color: #ffffff;
+}
+
+.mainBack .infoHeader .add_info .country_select select option {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.mainBack .infoHeader .add_info .search {
+  margin-right: 20px;
+}
+
+.mainBack .infoHeader .add_info .search a img {
+  width: 20px;
+  height: 20px;
+}
+
+.mainBack .infoHeader .add_info .notification {
+  margin-right: 40px;
+}
+
+.mainBack .infoHeader .add_info .notification a img {
+  width: 20px;
+  height: 20px;
+}
+
+.mainBack .infoHeader .add_info .notification a .notif_items {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+.mainBack .infoHeader .add_info .photo_user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainBack .infoHeader .add_info .photo_user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 180px;
+  margin-right: 15px;
+  margin-top: -8px;
+}
+
+.mainBack .infoHeader .add_info .photo_user span {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
+  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  padding: 5px;
+  margin-right: 15px;
+}
+
+.mainBack .infoHeader .add_info .photo_user p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
+.mainBack .leftImg {
+  padding-top: 30px;
+  background: #381a42;
+  padding-bottom: 50px;
+}
+
+.mainBack .leftImg .profileInformation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainBack .leftImg .profileInformation .leftPoitionPhoto {
+  margin-right: 50px;
+}
+
+.mainBack .leftImg .profileInformation .leftPoitionPhoto .mainPhotoUser {
+  display: relative;
+}
+
+.mainBack .leftImg .profileInformation .leftPoitionPhoto .mainPhotoUser img {
+  max-width: 380px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  min-width: 320px;
+  min-height: 440px;
+}
+
+.mainBack .leftImg .profileInformation .leftPoitionPhoto .mainPhotoUser .info_user_common {
+  display: none;
+  position: absolute;
+  top: 530px;
+  left: 25%;
+}
+
+.mainBack .leftImg .profileInformation .leftPoitionPhoto .mainPhotoUser .info_user_common .name_user {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #ffffff;
+  margin-bottom: 1px;
+}
+
+.mainBack .leftImg .profileInformation .leftPoitionPhoto .mainPhotoUser .info_user_common .name_user span {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+.mainBack .leftImg .profileInformation .leftPoitionPhoto .mainPhotoUser .info_user_common .country_user {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #ffffff;
+  text-align: left;
+}
+
+.mainBack .leftImg .profileInformation .leftPoitionPhoto .sliderImgUser {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainBack .leftImg .profileInformation .leftPoitionPhoto .sliderImgUser img {
+  width: 89px;
+  height: 89px;
+  margin-right: 8px;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo {
+  text-align: left;
+  width: 550px;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .nameUserMain p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .nameUserMain p span {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .nameUserMain .greed_btn a {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 27px 15px 30px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
+  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+  border-radius: 40px;
+  width: 220px;
+  border: none;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .nameUserMain .greed_btn a img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 10px;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .userDescr {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .userDescr .stavka p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #fffdfd;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .userDescr .money p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #fffdfd;
+  text-align: end;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .userDescr .heightUser p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fffdfd;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .userDescr .heightUserValue p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fffdfd;
+  text-align: end;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .userDescr .weightUser p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fffdfd;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .userDescr .weightUserValue p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fffdfd;
+  text-align: end;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .userDescr .colorEyesUser p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fffdfd;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .userDescr .colorEyesUserValue p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fffdfd;
+  text-align: end;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .userDescr .hairUser p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fffdfd;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .userDescr .hairUserValue p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fffdfd;
+  text-align: end;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .userDescr .goalMeetUser p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fffdfd;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .userDescr .goalMeetUserValue p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fffdfd;
+  text-align: end;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .aboutMe h6 {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #fffdfd;
+  margin-bottom: 5px;
+}
+
+.mainBack .leftImg .profileInformation .rightSectionInfo .aboutMe p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fffdfd;
+}
+
+.mainBack footer .footer-info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 2fr 4fr 1fr 2fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 2fr 4fr 1fr 2fr;
+  justify-items: start;
+  padding-bottom: 20px;
+  padding-left: 0;
+  margin-top: calc((100vh - 700px) / 2);
+  margin-bottom: 0;
+}
+
+.mainBack footer .footer-info li {
+  list-style-type: none;
+}
+
+.mainBack footer .footer-info li a {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #eeeeee;
+  text-decoration: none;
+  text-align: center;
+}
+
+.mainBack footer .footer-info li p {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #eeeeee;
+}
+
+.mainBack footer .footer-info li:last-child {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.mainBack footer .footer-info li:nth-child(7) {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+@media screen and (max-width: 1439.98px) {
+  .center {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  .mainBack .infoHeader .add_info .photo_user p {
+    display: none;
+  }
+  .mainBack footer .footer-info {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding-bottom: 0;
+  }
+  .mainBack footer .footer-info {
+    margin-top: 50px;
+  }
+  .mainBack footer .footer-info li:nth-child(5) {
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  .mainBack footer .footer-info li:nth-child(6) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-column: 1 / span 5;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .mainBack footer .footer-info li:nth-child(7) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-column: 1 / span 5;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-bottom: 10px;
+  }
+  .mainBack footer .footer-info li:nth-child(8) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-column: 1 / span 5;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .mainBack footer .footer-info li:nth-child(3) {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .mainBack footer .footer-info li:nth-child(4) {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .mainBack footer .footer-info li a {
+    font-size: 12px;
+  }
+  .mainBack footer .footer-info li p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .mainBack .infoHeader .list-menu {
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* justify-content: center; */
+    padding-top: 50px;
+    justify-items: center;
+    text-align: center;
+    padding-left: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    top: -45px;
+    width: 105%;
+    left: -105%;
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+  }
+  .mainBack .infoHeader .list-menu li {
+    margin-bottom: 20px;
+  }
+  .mainBack .infoHeader .show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+    left: -5%;
+  }
+  .mainBack .infoHeader {
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
+  .mainBack .infoHeader .add_info {
+    margin-left: 20px;
+  }
+  #burger {
+    display: block;
+  }
+  .mainBack .leftImg .profileInformation .leftPoitionPhoto {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .mainBack .infoHeader .address a span {
+    display: none;
+  }
+  .firstHeader {
+    display: none;
+  }
+  .mainBack .infoHeader .add_info .country_select {
+    display: none;
+  }
+  .mainBack .infoHeader .list-menu {
+    padding-top: 27px;
+  }
+  #close {
+    right: 25px;
+    top: 10px;
+  }
+  .mainBack footer .footer-info {
+    padding-left: 0px;
+    -ms-grid-columns: 2fr 3fr 2fr 3fr 4fr;
+        grid-template-columns: 2fr 3fr 2fr 3fr 4fr;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .mainBack .leftImg .profileInformation {
+    display: block;
+  }
+  .mainBack .leftImg .profileInformation .leftPoitionPhoto .sliderImgUser {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .mainBack .leftImg .profileInformation .rightSectionInfo {
+    max-width: 100%;
+  }
+  .mainBack .leftImg .profileInformation .leftPoitionPhoto .mainPhotoUser .info_user_common {
+    display: block;
+  }
+  .mainBack .leftImg .profileInformation .rightSectionInfo .nameUserMain p {
+    display: none;
+  }
+  .mainBack .leftImg .profileInformation .rightSectionInfo .nameUserMain .greed_btn {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .mainBack .leftImg {
+    padding-bottom: 0px;
+  }
+  .mainBack .leftImg .profileInformation .leftPoitionPhoto {
+    margin-right: 0px;
+  }
+  .mainBack .leftImg .profileInformation .leftPoitionPhoto .sliderImgUser div:last-child img {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .mainBack .leftImg .profileInformation .leftPoitionPhoto .mainPhotoUser img {
+    width: 100%;
+  }
+  .mainBack .leftImg .profileInformation .leftPoitionPhoto .sliderImgUser img {
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 424.98px) {
+  .mainBack .leftImg .profileInformation .leftPoitionPhoto .mainPhotoUser .info_user_common {
+    top: 470px;
+  }
+  .mainBack .leftImg .profileInformation .rightSectionInfo {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  .mainBack .leftImg .profileInformation .leftPoitionPhoto .mainPhotoUser img {
+    border-radius: 0;
+  }
+  .mainBack .leftImg {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 374.98px) {
+  .mainBack footer .footer-info {
+    -ms-grid-columns: 2fr 2fr 2fr 2fr;
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .mainBack footer .footer-info li:nth-child(5) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / span 4;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-top: 10px;
+  }
+  .mainBack footer .footer-info li:nth-child(6) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .mainBack footer .footer-info li:nth-child(7) {
+    margin-bottom: 10px;
+  }
+  .mainBack footer .footer-info {
+    padding-bottom: 15px;
+  }
+  .mainBack .leftImg .profileInformation .leftPoitionPhoto .sliderImgUser div:last-child img {
+    display: none;
+  }
+  .mainBack .infoHeader {
+    padding-bottom: 10px;
+  }
+  .mainBack .leftImg .profileInformation .leftPoitionPhoto .mainPhotoUser .info_user_common {
+    top: 410px;
+  }
+}
+/*# sourceMappingURL=style4.css.map */

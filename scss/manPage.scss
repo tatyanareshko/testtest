@@ -1,0 +1,609 @@
+.wrapper {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.center {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+}
+*:focus {
+    outline: none;
+}
+
+.center-form {
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto;
+}
+.hide-search {
+    display: none;
+}
+
+@mixin Rubik-medium($font-size-set) {
+    font-family: "Rubik", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $font-size-set;
+    line-height: 150%;
+}
+
+@mixin Rubik-regular($font-size-set) {
+    font-family: "Rubik", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: $font-size-set;
+    line-height: 150%;
+}
+@mixin Rubik-bold($font-size-set) {
+    font-family: "Rubik", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $font-size-set;
+    line-height: 150%;
+}
+
+#burger {
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+
+#close {
+    display: none;
+    position: absolute;
+    right: 50px;
+    top: -30px;
+    font-size: 36px;
+    color: #ffffff;
+    z-index: 10;
+}
+
+#burger i {
+    display: block;
+
+    background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+    width: 24px;
+    height: 3px;
+    margin: 3px;
+}
+
+.firstHeader {
+    background: rgba(27, 5, 34, 1);
+
+    .upperHeader {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+
+        p {
+            @include Rubik-medium(16px);
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-top: 13px;
+            margin-right: 20px;
+            margin-bottom: 13px;
+        }
+
+        .input-field {
+            display: inline-block;
+            vertical-align: middle;
+            select {
+                border: none;
+                @include Rubik-regular(16px);
+                background-color: rgba(27, 5, 34, 1);
+                color: #ffffff;
+                margin-top: 15px;
+                margin-left: 56px;
+                option {
+                    @include Rubik-regular(16px);
+                }
+            }
+        }
+    }
+}
+
+.mainBack {
+    background: linear-gradient(180deg, rgba(42, 17, 51, 1) 0%, rgba(56, 26, 66, 1) 100%);
+    text-align: center;
+    position: relative;
+
+    .infoHeader {
+        display: grid;
+        grid-template-columns: 1fr 2fr 3fr;
+        padding-bottom: 30px;
+
+        .address {
+            display: flex;
+            a {
+                @include Rubik-medium(22px);
+                color: #ffffff;
+                margin-top: 26px;
+                text-decoration: none;
+                display: flex;
+                img {
+                    margin-right: 20px;
+                    width: 60px;
+                    height: 60px;
+                }
+                span {
+                    align-self: center;
+                }
+            }
+        }
+        .list-menu {
+            display: flex;
+            margin-top: 48px;
+            margin-right: 20px;
+            margin-left: 20px;
+            justify-content: space-between;
+
+            li {
+                list-style-type: none;
+                margin-right: 10px;
+                a {
+                    text-decoration: none;
+                    @include Rubik-regular(16px);
+                    color: #ffffff;
+                }
+            }
+
+            li:hover a {
+                color: rgba(254, 103, 3, 1);
+            }
+
+            li:first-child {
+                margin-bottom: -45px;
+                border-bottom: 3px solid #ff6a00;
+            }
+
+            li:first-child a {
+                color: rgba(254, 103, 3, 1);
+            }
+        }
+
+        .add_info {
+            margin-top: 48px;
+            display: flex;
+            justify-self: end;
+            /* .country_select {
+                select {
+                    margin-right: 50px;
+                    border: none;
+                    @include Rubik-regular(16px);
+                    background-color: rgba(45, 20, 54, 1);
+                    color: #ffffff;
+
+                    option {
+                        @include Rubik-regular(16px);
+                    }
+                } */
+            /*  } */
+            .search {
+                margin-right: 20px;
+                a {
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+
+            .search-input {
+                position: relative;
+                #searchInput {
+                    &.open-search {
+                        width: 0;
+                        padding: 0;
+                        background-color: rgba(42, 17, 51, 1);
+                        border: none;
+                    }
+                    @include Rubik-regular(16px);
+                    color: rgba(41, 41, 41, 1);
+                    transition: width 140ms ease-in 0s, padding 140ms ease-in 0s;
+                    width: 182px;
+                    height: 34px;
+                }
+
+                #search-list {
+                    &.hide-search {
+                        display: none;
+                    }
+                    list-style-type: none;
+                    width: 182px;
+                    height: auto;
+                    position: absolute;
+                    left: 0;
+                    box-shadow: rgb(230, 230, 230) 0px 1px 4px;
+                    border: 1px solid rgba(230, 230, 230, 1);
+                    background-color: rgba(42, 17, 51, 1);
+                    z-index: 10;
+                    padding: 0;
+                    .search-item {
+                        .item {
+                            a {
+                                text-decoration: none;
+                                p {
+                                    @include Rubik-regular(16px);
+                                    color: #ffffff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .notification {
+                margin-right: 40px;
+                a {
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        margin-left: 10px;
+                    }
+                    .notif_items {
+                        @include Rubik-regular(10px);
+                        color: #ffffff;
+                    }
+                }
+            }
+            .photo_user {
+                display: flex;
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 180px;
+                    margin-right: 15px;
+                    margin-top: -8px;
+                }
+                span {
+                    @include Rubik-regular(16px);
+                    display: inline-flex;
+                    width: 32px;
+                    height: 32px;
+                    background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+                    justify-content: center;
+                    border-radius: 50%;
+                    color: #fff;
+                    padding: 5px;
+                    margin-right: 15px;
+                }
+                p {
+                    @include Rubik-regular(16px);
+                    color: #ffffff;
+                    margin-left: 10px;
+                    margin-top: 3px;
+                }
+            }
+        }
+    }
+
+    .mainContentPage {
+        background: rgba(56, 26, 66, 1);
+        padding-bottom: 50px;
+        padding-top: 30px;
+        .allPhotos {
+            text-align: left;
+            overflow: hidden;
+            a {
+                @include Rubik-medium(28px);
+                color: #ffffff;
+                margin-bottom: 20px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .manPage {
+        background: rgba(56, 26, 66, 1);
+
+        .allPhotosMan {
+            text-align: left;
+            overflow: hidden;
+            a {
+                @include Rubik-medium(28px);
+                color: #ffffff;
+                margin-bottom: 20px;
+                text-decoration: none;
+            }
+            #man_page {
+                 display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                justify-content: space-between;
+                margin-top: 20px; 
+                overflow: hidden; 
+                .card_user {
+                    position: relative;
+                    margin-bottom: 25px;
+
+                    img {
+                        object-fit: cover;
+                        border-radius: 30px;
+                    }
+                    .info_user_common {
+                        position: absolute;
+                        top: 69%;
+                        .name_user {
+                            @include Rubik-regular(16px);
+                            color: #ffffff;
+                            margin-left: 20px;
+                            margin-bottom: 1px;
+                            span {
+                                @include Rubik-regular(16px);
+                                color: #ffffff;
+                            }
+                        }
+                        .country_user {
+                            @include Rubik-regular(12px);
+                            color: #ffffff;
+                            margin-bottom: 30px;
+                            margin-left: 20px;
+                        }
+                        .greed_btn {
+                            a {
+                                @include Rubik-medium(14px);
+                                color: #ffffff;
+                                text-decoration: none;
+                                padding: 14px 27px 15px 30px;
+                                width: 100%;
+                                background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+                                border-radius: 40px;
+                                width: 220px;
+                                border: none;
+
+                                img {
+                                    object-fit: cover;
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .footer-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 2fr 4fr 1fr 2fr;
+            justify-items: start;
+            padding-bottom: 20px;
+            padding-left: 0;
+            margin-top: calc((100vh - 700px) / 2);
+            margin-bottom: 0;
+            li {
+                list-style-type: none;
+                a {
+                    @include Rubik-regular(14px);
+                    color: #eeeeee;
+                    text-decoration: none;
+                    text-align: center;
+                }
+                p {
+                    @include Rubik-regular(14px);
+                    color: #eeeeee;
+                }
+            }
+            li:last-child {
+                justify-self: end;
+            }
+            li:nth-child(7) {
+                justify-self: center;
+            }
+        }
+    }
+}
+.modal_hide {
+    display: none;
+    top: 150px;
+}
+.modal_open {
+    display: block;
+    top: 150px;
+}
+
+.greed_mes {
+    background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+    text-align: center;
+    border-radius: 200px;
+    width: 50%;
+    position: absolute;
+    left: 28%;
+    top: 50%;
+    .message_hi {
+        .commonCol {
+            p {
+                @include Rubik-regular(20px);
+                color: #eeeeee;
+                padding: 30px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.add-opacity {
+    background: #1d0b23;
+    filter: blur(3px);
+}
+
+@media screen and (max-width: 1439.98px) {
+    .center {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .mainBack .manPage .allPhotosMan #man_page{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 1199.98px) {
+    .mainBack .infoHeader .add_info .photo_user p {
+        display: none;
+    }
+    .mainBack footer .footer-info {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        padding-bottom: 0;
+    }
+
+    .mainBack footer .footer-info {
+        margin-top: 50px;
+    }
+    .mainBack footer .footer-info li:nth-child(5) {
+        justify-self: end;
+    }
+
+    .mainBack footer .footer-info li:nth-child(6) {
+        grid-column: 1 / span 5;
+        justify-self: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .mainBack footer .footer-info li:nth-child(7) {
+        grid-column: 1 / span 5;
+        justify-self: center;
+        margin-bottom: 10px;
+    }
+    .mainBack footer .footer-info li:nth-child(8) {
+        grid-column: 1 / span 5;
+        justify-self: center;
+    }
+    .mainBack footer .footer-info li:nth-child(3) {
+        justify-self: center;
+    }
+    .mainBack footer .footer-info li:nth-child(4) {
+        justify-self: center;
+    }
+    .mainBack footer .footer-info li a {
+        font-size: 12px;
+    }
+    .mainBack footer .footer-info li p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1023.98px) {
+    .mainBack .manPage .allPhotosMan #man_page{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    .mainBack .infoHeader .list-menu {
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.8);
+        flex-direction: column;
+        /* justify-content: center; */
+        padding-top: 50px;
+        justify-items: center;
+        text-align: center;
+        padding-left: 0;
+        align-items: center;
+        position: fixed;
+        top: -45px;
+        width: 105%;
+        left: -105%;
+        transition: 1s ease-in-out;
+        z-index: 10;
+    }
+
+    .mainBack .infoHeader .list-menu li {
+        margin-bottom: 20px;
+    }
+    .mainBack .infoHeader .list-menu li:first-child{
+        margin-bottom: 15px;
+    }
+    .mainBack .infoHeader .show {
+        display: flex;
+        opacity: 1;
+        transition: 1s ease-in-out;
+        left: -5%;
+    }
+
+    .mainBack .infoHeader {
+        grid-template-columns: 1fr 2fr;
+    }
+    .mainBack .infoHeader .add_info {
+        margin-left: 20px;
+    }
+
+    #burger {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .mainBack .infoHeader .address a span {
+        display: none;
+    }
+    .firstHeader {
+        display: none;
+    }
+
+    .mainBack .infoHeader .add_info .country_select {
+        display: none;
+    }
+    .mainBack .infoHeader .list-menu {
+        padding-top: 27px;
+    }
+
+    #close {
+        right: 25px;
+        top: 10px;
+    }
+
+    .mainBack .mainContentPage {
+        padding-bottom: 20px;
+    }
+    .mainBack .womanPage {
+        padding-bottom: 20px;
+    }
+    .mainBack footer .footer-info {
+        padding-left: 0px;
+        grid-template-columns: 2fr 3fr 2fr 3fr 4fr;
+        justify-content: space-between;
+    }
+    .mainBack .manPage .allPhotosMan #man_page{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .mainBack .manPage .allPhotosMan #man_page{
+        grid-template-columns:  1fr;
+    }
+    .mainBack .mainContentPage .allPhotos #top .card_user {
+        margin-bottom: 45px;
+    }
+}
+
+@media screen and (max-width: 374.98px) {
+    .mainBack footer .footer-info {
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+        justify-content: space-between;
+    }
+    .mainBack footer .footer-info li:nth-child(5) {
+        grid-column: 1 / span 4;
+        justify-self: center;
+        margin-top: 10px;
+    }
+    .mainBack footer .footer-info li:nth-child(6) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .mainBack footer .footer-info li:nth-child(7) {
+        margin-bottom: 10px;
+    }
+    .mainBack footer .footer-info {
+        padding-bottom: 15px;
+    }
+}
